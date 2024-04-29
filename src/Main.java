@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-CuentaAtras.cuentaAtras();
+          CuentaAtras.cuentaAtras();
+          CuentaInfinita.cuentaInfinita();
     }
 }
