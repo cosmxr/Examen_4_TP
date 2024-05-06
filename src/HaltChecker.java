@@ -3,8 +3,6 @@ public class HaltChecker {
     private CuentaInfinita infinito;
     private CuentaAtras finito;
 
-    private HaltChecker() {}
-
     public static HaltChecker getInstance() {
         if (instance == null) {
             instance = new HaltChecker();

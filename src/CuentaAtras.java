@@ -6,15 +6,26 @@
  */
 
 public class CuentaAtras implements Proceso {
+    private Proceso next;
+
+    @Override
+    public void setNext(Proceso proceso) {
+        this.next = proceso;
+    }
+
     @Override
     public void execute(int cuenta) {
-        while (cuenta >= 0) {
-            System.out.println(cuenta);
-            cuenta--;
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+        if (cuenta >= 0 && next != null) {
+            next.execute(cuenta);
+        } else {
+            while (cuenta > 0) {
+                System.out.println(cuenta);
+                cuenta--;
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
     }
