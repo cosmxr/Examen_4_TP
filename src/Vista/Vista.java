@@ -1,7 +1,11 @@
+package Vista;
+
+import Controlador.Reverser;
+import Modelo.CuentaAtras;
+import Modelo.CuentaInfinita;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 public class Vista {
     private JFrame frame;
@@ -14,39 +18,36 @@ public class Vista {
         this.reverser = reverser;
         frame = new JFrame("Reverser");
         textArea = new JTextArea();
-        textArea.setEditable(false); // Hacer el área de texto no editable
+        textArea.setEditable(false);
+
         btnCuentaInfinita = new JButton("Iniciar Cuenta Infinita");
         btnCuentaAtras = new JButton("Iniciar Cuenta Atrás");
 
-        btnCuentaInfinita.addActionListener(e -> {
-            Proceso proceso = new CuentaInfinita();
-            reverser.execute(proceso);
-            reverser.start();
-        });
-
-        btnCuentaAtras.addActionListener(e -> {
-            Proceso proceso = new CuentaAtras();
-            reverser.execute(proceso);
-            reverser.start();
-        });
-
         JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
         panel.add(btnCuentaInfinita);
         panel.add(btnCuentaAtras);
+
         frame.getContentPane().add(panel, BorderLayout.NORTH);
         frame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
+
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
-        // Manejar cierre de la ventana
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                super.windowClosing(e);
-                reverser.stop(); // Detener la ejecución al cerrar la ventana
-            }
-        });
+    public JFrame getFrame() {
+        return frame;
+    }
 
+    public JButton getBtnCuentaInfinita() {
+        return btnCuentaInfinita;
+    }
+
+    public JButton getBtnCuentaAtras() {
+        return btnCuentaAtras;
+    }
+
+    public void show() {
         frame.setVisible(true);
     }
 
@@ -54,4 +55,9 @@ public class Vista {
         SwingUtilities.invokeLater(() -> textArea.append(message + "\n"));
     }
 }
+
+
+
+
+
 

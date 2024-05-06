@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Creacion_Vista">
-      <change afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Handler.java" afterDir="false" />
+    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Cuentas_Handler">
+      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controlador/Reverser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaAtras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CuentaAtras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaInfinita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CuentaInfinita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaAtras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/CuentaAtras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaAtrasChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaAtrasHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaInfinita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/CuentaInfinita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaInfinitaChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CuentaInfinitaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HaltChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/HaltChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proceso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proceso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reverser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proceso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/Proceso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reverser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "cosmxr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/cosmxr/Examen_4_TP.git",
+    "accountId": "1d7fca6c-72dd-43b4-8728-efb155061db6"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -40,21 +59,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Vista.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Examen 4 TP" />
@@ -62,9 +82,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Vista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Vista.Vista" />
+      <module name="Examen 4 TP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Vista" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +120,7 @@
       <updated>1714394632473</updated>
       <workItem from="1714394633609" duration="5259000" />
       <workItem from="1714649455962" duration="1922000" />
-      <workItem from="1714748273989" duration="6211000" />
+      <workItem from="1714748273989" duration="10964000" />
     </task>
     <task id="LOCAL-00001" summary="CuentaAtras y CuentaInfinita">
       <option name="closed" value="true" />
@@ -120,7 +154,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715000850897</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creacion_Cuentas_Checker, Checker y Handler">
+      <option name="closed" value="true" />
+      <created>1715002387726</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715002387726</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cuentas_Handler">
+      <option name="closed" value="true" />
+      <created>1715002479895</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715002479895</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +181,8 @@
     <MESSAGE value="Creacion_Haltchecker_CuentaInifinta" />
     <MESSAGE value="Creacion_Reverser" />
     <MESSAGE value="Creacion_Vista" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion_Vista" />
+    <MESSAGE value="Creacion_Cuentas_Checker, Checker y Handler" />
+    <MESSAGE value="Cuentas_Handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cuentas_Handler" />
   </component>
 </project>

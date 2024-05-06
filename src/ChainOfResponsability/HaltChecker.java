@@ -1,3 +1,9 @@
+package ChainOfResponsability;
+
+import Modelo.CuentaAtras;
+import Modelo.CuentaInfinita;
+import Modelo.Proceso;
+
 public class HaltChecker {
     private static HaltChecker instance;
     private CuentaInfinita infinito;
@@ -18,7 +24,7 @@ public class HaltChecker {
             return true;
             //se para
         } else {
-            throw new IllegalArgumentException("Proceso desconocido");
+            throw new IllegalArgumentException("modelo.Proceso desconocido");
         }
     }
 }
