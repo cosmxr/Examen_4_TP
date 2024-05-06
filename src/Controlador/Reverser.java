@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Proceso;
 import Vista.Vista;
 import ChainOfResponsability.HaltChecker;
+import Excepciones.*;
 
 import javax.swing.*;
 
@@ -21,13 +22,16 @@ public class Reverser {
         this.vista = vista;
     }
 
-    public void execute(Proceso proceso) {
+    public void execute(Proceso proceso) throws ProcesoNoImplementado{
+        if  (!(proceso instanceof Proceso)) {
+            throw new ProcesoNoImplementado("El objeto proporcionado no implementa la interfaz Proceso");
+        }
         this.proceso = proceso;
     }
 
-    public void start() {
+    public void start() throws ProcesoSinEspecificar {
         if (proceso == null) {
-            throw new IllegalStateException("No se ha especificado ningún proceso para ejecutar.");
+            throw new ProcesoSinEspecificar("No se ha especificado ningún proceso para ejecutar.");
         }
 
         running = true;
@@ -67,7 +71,10 @@ public class Reverser {
         worker.execute();
     }
 
-    public void stop() {
+    public void stop() throws ProcesoYaDetenido{
+        if (!running) {
+            throw new ProcesoYaDetenido("El proceso ya se ha detenido.");
+        }
         running = false;
     }
 }

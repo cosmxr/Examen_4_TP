@@ -1,3 +1,6 @@
+import Excepciones.ProcesoNoImplementado;
+import Excepciones.ProcesoSinEspecificar;
+import Excepciones.ProcesoYaDetenido;
 import Vista.Vista;
 import Controlador.Reverser;
 import Modelo.CuentaAtras;
@@ -22,14 +25,31 @@ public class Main {
 
         // Configurar ActionListener para el botón de Cuenta Infinita
         vista.getBtnCuentaInfinita().addActionListener(e -> {
-            reverser.execute(new CuentaInfinita(vista)); // Iniciar una cuenta infinita
-            reverser.start(); // Comenzar la ejecución del proceso
+            try {
+                reverser.execute(new CuentaInfinita(vista)); // Iniciar una cuenta infinita
+            } catch (ProcesoNoImplementado ex) {
+                throw new RuntimeException(ex);
+            }
+            try {
+                reverser.start(); // Comenzar la ejecución del proceso
+            } catch (ProcesoSinEspecificar ex) {
+                throw new RuntimeException(ex);
+
+            }
         });
 
         // Configurar ActionListener para el botón de Cuenta Atrás
         vista.getBtnCuentaAtras().addActionListener(e -> {
-            reverser.execute(new CuentaAtras(vista)); // Iniciar una cuenta atrás
-            reverser.start(); // Comenzar la ejecución del proceso
+            try {
+                reverser.execute(new CuentaAtras(vista)); // Iniciar una cuenta atrás
+            } catch (ProcesoNoImplementado ex) {
+                throw new RuntimeException(ex);
+            }
+            try {
+                reverser.start(); // Comenzar la ejecución del proceso
+            } catch (ProcesoSinEspecificar ex) {
+                throw new RuntimeException(ex);
+            }
         });
     }
 }

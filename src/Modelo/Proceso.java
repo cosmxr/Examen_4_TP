@@ -1,6 +1,8 @@
 package Modelo;
 
+import Excepciones.CuentaException;
+
 public interface Proceso {
-    void execute() throws InterruptedException;
+    void execute() throws CuentaException, InterruptedException;
 }
 

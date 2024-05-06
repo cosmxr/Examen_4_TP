@@ -1,5 +1,8 @@
 package ChainOfResponsability;
 
+import Excepciones.ProcesoDesconocido;
+import Excepciones.ProcesoSinEspecificar;
+import Excepciones.ProcesoYaDetenido;
 import Modelo.CuentaAtras;
 import Modelo.CuentaInfinita;
 import Modelo.Proceso;
@@ -16,7 +19,7 @@ public class HaltChecker {
         return instance;
     }
 
-    public boolean willHalt(Proceso proceso) {
+    public boolean willHalt(Proceso proceso) throws ProcesoDesconocido {
         if (proceso instanceof CuentaInfinita) {
             return false;
             //no se para
@@ -24,7 +27,7 @@ public class HaltChecker {
             return true;
             //se para
         } else {
-            throw new IllegalArgumentException("modelo.Proceso desconocido");
+            throw new ProcesoDesconocido ("Proceso desconocido");
         }
     }
 }

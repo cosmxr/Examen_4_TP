@@ -1,5 +1,6 @@
 package Modelo;
 
+import Excepciones.*;
 import Vista.Vista;
 
 public class CuentaInfinita implements Proceso {

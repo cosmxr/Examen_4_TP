@@ -4,23 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Cuentas_Handler">
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controlador/Reverser.java" afterDir="false" />
+    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Correccion del proyecto en conjunto">
+      <change afterPath="$PROJECT_DIR$/src/Excepciones/CuentaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoDesconocido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoIncorrecto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoNoImplementado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoYaDetenido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaAtras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/CuentaAtras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaAtrasChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaAtrasHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaInfinita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/CuentaInfinita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaInfinitaChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CuentaInfinitaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HaltChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/HaltChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/HaltChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/HaltChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/Reverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Reverser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proceso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/Proceso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reverser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modelo/CuentaInfinita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/CuentaInfinita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modelo/Proceso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/Proceso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProcesoSinEspecificar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoSinEspecificar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +64,7 @@
     "Application.Main.executor": "Run",
     "Application.Vista.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -120,7 +121,7 @@
       <updated>1714394632473</updated>
       <workItem from="1714394633609" duration="5259000" />
       <workItem from="1714649455962" duration="1922000" />
-      <workItem from="1714748273989" duration="10964000" />
+      <workItem from="1714748273989" duration="13352000" />
     </task>
     <task id="LOCAL-00001" summary="CuentaAtras y CuentaInfinita">
       <option name="closed" value="true" />
@@ -170,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715002479895</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Correccion del proyecto en conjunto">
+      <option name="closed" value="true" />
+      <created>1715010831163</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715010831163</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +192,7 @@
     <MESSAGE value="Creacion_Vista" />
     <MESSAGE value="Creacion_Cuentas_Checker, Checker y Handler" />
     <MESSAGE value="Cuentas_Handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cuentas_Handler" />
+    <MESSAGE value="Correccion del proyecto en conjunto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion del proyecto en conjunto" />
   </component>
 </project>

@@ -1,15 +1,16 @@
 package ChainOfResponsability;
 
+import Excepciones.ProcesoIncorrecto;
 import Modelo.Proceso;
 import Vista.Vista;
 
 public class ExceptionHandler {
     private static ExceptionHandler instance;
-    private Checker cuentaInfinitaChecker;
-    private Checker cuentaAtrasChecker;
+    private final Checker cuentaInfinitaChecker;
+    private final Checker cuentaAtrasChecker;
 
-    private Handler cuentaInfinitaHandler;
-    private Handler cuentaAtrasHandler;
+    private final Handler cuentaInfinitaHandler;
+    private final Handler cuentaAtrasHandler;
 
     private ExceptionHandler() {
         cuentaInfinitaChecker = new CuentaInfinitaChecker();
@@ -26,18 +27,13 @@ public class ExceptionHandler {
         return instance;
     }
 
-    public void handleException(Proceso proceso, Vista vista) {
-        try {
-            if (cuentaInfinitaChecker.check(proceso)) {
-                cuentaInfinitaHandler.handle(proceso, vista);
-            } else if (cuentaAtrasChecker.check(proceso)) {
-                cuentaAtrasHandler.handle(proceso, vista);
-            } else {
-                throw new IllegalArgumentException("Proceso desconocido");
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace(); // Maneja la interrupción adecuadamente
-            Thread.currentThread().interrupt(); // Restaura la bandera de interrupción
+    public void handleException(Proceso proceso, Vista vista) throws ProcesoIncorrecto, InterruptedException {
+        if (cuentaInfinitaChecker.check(proceso)) {
+            cuentaInfinitaHandler.handle(proceso, vista);
+        } else if (cuentaAtrasChecker.check(proceso)) {
+            cuentaAtrasHandler.handle(proceso, vista);
+        } else {
+            throw new ProcesoIncorrecto("Proceso desconocido");
         }
     }
 }
