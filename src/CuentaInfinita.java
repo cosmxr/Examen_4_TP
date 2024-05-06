@@ -4,18 +4,19 @@
  *
  * @throws RuntimeException si el hilo es interrumpido durante el sueño "diferencia de 0.5"
  */
-public class CuentaInfinita {
-        public static void cuentaInfinita() {
-            int num = 1;
-            while (true) {
-                System.out.println(num);
-                num++;
-                try {
-                    Thread.sleep(500); //funcion para crear la diferencia de 0.5 segundos
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+public class CuentaInfinita implements Proceso {
+    @Override
+    public void execute(int cuenta) {
+
+        while (true) {
+            System.out.println(cuenta);
+            cuenta++;
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         }
     }
+}
 
