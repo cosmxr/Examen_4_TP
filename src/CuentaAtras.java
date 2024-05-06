@@ -14,18 +14,14 @@ public class CuentaAtras implements Proceso {
     }
 
     @Override
-    public void execute(int cuenta) {
+    public void execute(int cuenta) throws InterruptedException {
         if (cuenta >= 0 && next != null) {
             next.execute(cuenta);
         } else {
             while (cuenta > 0) {
                 System.out.println(cuenta);
                 cuenta--;
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                Thread.sleep(500); // Espera 0.5 segundos
             }
         }
     }

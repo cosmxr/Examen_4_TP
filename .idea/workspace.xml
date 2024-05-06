@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Creacion_Reverser">
+    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Creacion_Vista">
+      <change afterPath="$PROJECT_DIR$/src/Checker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CuentaAtras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CuentaAtras.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CuentaInfinita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CuentaInfinita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HaltChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HaltChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Proceso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proceso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reverser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
       <updated>1714394632473</updated>
       <workItem from="1714394633609" duration="5259000" />
       <workItem from="1714649455962" duration="1922000" />
-      <workItem from="1714748273989" duration="4565000" />
+      <workItem from="1714748273989" duration="6211000" />
     </task>
     <task id="LOCAL-00001" summary="CuentaAtras y CuentaInfinita">
       <option name="closed" value="true" />
@@ -109,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714999323701</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Creacion_Vista">
+      <option name="closed" value="true" />
+      <created>1715000850897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715000850897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +130,7 @@
     <MESSAGE value="CuentaAtras y CuentaInfinita" />
     <MESSAGE value="Creacion_Haltchecker_CuentaInifinta" />
     <MESSAGE value="Creacion_Reverser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion_Reverser" />
+    <MESSAGE value="Creacion_Vista" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion_Vista" />
   </component>
 </project>
