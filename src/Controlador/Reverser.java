@@ -1,5 +1,7 @@
 package Controlador;
 
+import ChainOfResponsability.ExcepcionHandlerInterface;
+import ChainOfResponsability.ExceptionHandler;
 import Modelo.Proceso;
 import Vista.Vista;
 import ChainOfResponsability.HaltChecker;
@@ -12,10 +14,12 @@ public class Reverser {
     private Proceso proceso;
     private boolean running;
 
+
     public Reverser() {
         this.vista = null;
         this.proceso = null;
         this.running = false;
+
     }
 
     public void setVista(Vista vista) {
@@ -29,7 +33,7 @@ public class Reverser {
         this.proceso = proceso;
     }
 
-    public void start() throws ProcesoSinEspecificar {
+    public void start(Proceso inputProceso) throws ProcesoSinEspecificar {
         if (proceso == null) {
             throw new ProcesoSinEspecificar("No se ha especificado ningún proceso para ejecutar.");
         }
@@ -40,8 +44,8 @@ public class Reverser {
             protected Void doInBackground() throws Exception {
                 try {
                     HaltChecker haltChecker = HaltChecker.getInstance();
-                    boolean willHalt = haltChecker.willHalt(proceso);
-                    if (willHalt) {
+                    String willHalt = haltChecker.willHalt(proceso, inputProceso);
+                    if (willHalt.equals("para")) {
                         while (running) {
                             publish("El proceso se detendrá, iniciando bucle infinito...");
                             Thread.sleep(1000); // Espera 1 segundo
@@ -50,7 +54,7 @@ public class Reverser {
                         publish("El proceso es infinito, no se detendrá");
                     }
                 } catch (Exception e) {
-                    publish("Error al ejecutar el proceso: " + e.getMessage());
+                    publish("Error al ejecutar el proceso:  " + e.getMessage());
                 }
                 return null;
             }
@@ -78,11 +82,6 @@ public class Reverser {
         running = false;
     }
 }
-
-
-
-
-
 
 
 

@@ -1,6 +1,6 @@
 import Excepciones.ProcesoNoImplementado;
 import Excepciones.ProcesoSinEspecificar;
-import Excepciones.ProcesoYaDetenido;
+import Modelo.Proceso;
 import Vista.Vista;
 import Controlador.Reverser;
 import Modelo.CuentaAtras;
@@ -23,7 +23,17 @@ public class Main {
             vista.getFrame().setVisible(true);
         });
 
+        Proceso[] inputProceso = new Proceso[1];
+
         // Configurar ActionListener para el botón de Cuenta Infinita
+        vista.getBtnInputCuentaInfinita().addActionListener(e -> {
+            inputProceso[0] = new CuentaInfinita(vista);
+        });
+
+        vista.getBtnInputCuentaAtras().addActionListener(e -> {
+            inputProceso[0] = new CuentaAtras(vista);
+        });
+
         vista.getBtnCuentaInfinita().addActionListener(e -> {
             try {
                 reverser.execute(new CuentaInfinita(vista)); // Iniciar una cuenta infinita
@@ -31,14 +41,12 @@ public class Main {
                 throw new RuntimeException(ex);
             }
             try {
-                reverser.start(); // Comenzar la ejecución del proceso
+                reverser.start(inputProceso[0]); // Comenzar la ejecución del proceso
             } catch (ProcesoSinEspecificar ex) {
                 throw new RuntimeException(ex);
-
             }
         });
 
-        // Configurar ActionListener para el botón de Cuenta Atrás
         vista.getBtnCuentaAtras().addActionListener(e -> {
             try {
                 reverser.execute(new CuentaAtras(vista)); // Iniciar una cuenta atrás
@@ -46,12 +54,10 @@ public class Main {
                 throw new RuntimeException(ex);
             }
             try {
-                reverser.start(); // Comenzar la ejecución del proceso
+                reverser.start(inputProceso[0]); // Comenzar la ejecución del proceso
             } catch (ProcesoSinEspecificar ex) {
                 throw new RuntimeException(ex);
             }
         });
     }
 }
-
-

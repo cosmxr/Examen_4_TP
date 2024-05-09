@@ -1,8 +1,6 @@
 package Vista;
 
 import Controlador.Reverser;
-import Modelo.CuentaAtras;
-import Modelo.CuentaInfinita;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,18 +11,27 @@ public class Vista {
     private JButton btnCuentaInfinita;
     private JButton btnCuentaAtras;
     private Reverser reverser;
+    private JButton btnInputCuentaInfinita;
+    private JButton btnInputCuentaAtras;
 
     public Vista(Reverser reverser) {
         this.reverser = reverser;
         frame = new JFrame("Reverser");
+        frame.setLayout(new BorderLayout());
+
         textArea = new JTextArea();
         textArea.setEditable(false);
 
+        btnInputCuentaInfinita = new JButton("Input Cuenta Infinita");
+        btnInputCuentaAtras = new JButton("Input Cuenta Atrás");
         btnCuentaInfinita = new JButton("Iniciar Cuenta Infinita");
         btnCuentaAtras = new JButton("Iniciar Cuenta Atrás");
 
         JPanel panel = new JPanel();
-        panel.setLayout(new FlowLayout());
+        panel.setLayout(new GridLayout(2, 2));
+
+        panel.add(btnInputCuentaInfinita);
+        panel.add(btnInputCuentaAtras);
         panel.add(btnCuentaInfinita);
         panel.add(btnCuentaAtras);
 
@@ -47,6 +54,14 @@ public class Vista {
         return btnCuentaAtras;
     }
 
+    public JButton getBtnInputCuentaInfinita() {
+        return btnInputCuentaInfinita;
+    }
+
+    public JButton getBtnInputCuentaAtras() {
+        return btnInputCuentaAtras;
+    }
+
     public void show() {
         frame.setVisible(true);
     }
@@ -55,7 +70,6 @@ public class Vista {
         SwingUtilities.invokeLater(() -> textArea.append(message + "\n"));
     }
 }
-
 
 
 
