@@ -1,0 +1,112 @@
+@startuml
+
+package "ChainOfResponsability" {
+    interface "ExcepcionHandlerInterface" {
+        + handleException(Exception)
+        + setNextHandler(ExcepcionHandlerInterface)
+    }
+
+    class "CuentaAtrasProcesoHandler" {
+        + handleException(Exception)
+        + setNextHandler(ExcepcionHandlerInterface)
+    }
+
+    class "CuentaInfinitaProcesoHandler" {
+        + handleException(Exception)
+        + setNextHandler(ExcepcionHandlerInterface)
+    }
+
+    class "HaltCheckerHandler" {
+        + handleException(Exception)
+        + setNextHandler(ExcepcionHandlerInterface)
+    }
+
+    class "ReverserHandler" {
+        + handleException(Exception)
+        + setNextHandler(ExcepcionHandlerInterface)
+    }
+
+    class "ExceptionHandler" {
+        + getInstance()
+        + handleException(Exception)
+    }
+
+    class "HaltChecker" {
+        + getInstance()
+        + willHalt(Proceso, Proceso)
+    }
+}
+
+package "Controlador" {
+    class "Reverser" {
+        + setVista(Vista)
+        + execute(Proceso)
+        + start(Proceso)
+        + stop()
+    }
+}
+
+package "Excepciones" {
+    class "ProcesoNoImplementado"
+    class "ProcesoSinEspecificar"
+    class "ProcesoDesconocido"
+    class "InputInvalido"
+    class "ProcesoYaDetenido"
+    class "CuentaException"
+}
+
+package "Modelo" {
+    interface "Proceso" {
+        + execute()
+    }
+
+    class "CuentaAtras" {
+        + execute()
+    }
+
+    class "CuentaInfinita" {
+        + execute()
+    }
+}
+
+package "Vista" {
+    class "Vista" {
+        + update(String)
+        + show()
+    }
+}
+
+Reverser --* Vista
+Reverser --* Proceso
+
+ExceptionHandler <|.. ExcepcionHandlerInterface
+CuentaAtrasProcesoHandler ..|> ExcepcionHandlerInterface
+CuentaInfinitaProcesoHandler ..|> ExcepcionHandlerInterface
+HaltCheckerHandler ..|> ExcepcionHandlerInterface
+ReverserHandler ..|> ExcepcionHandlerInterface
+
+Reverser --> HaltChecker : Uses
+
+HaltChecker --> Modelo.Proceso : Uses
+
+CuentaAtras ..|> Proceso
+CuentaInfinita ..|> Proceso
+
+ExceptionHandler --> CuentaAtrasProcesoHandler : Manages
+ExceptionHandler --> CuentaInfinitaProcesoHandler : Manages
+ExceptionHandler --> HaltCheckerHandler : Manages
+ExceptionHandler --> ReverserHandler : Manages
+
+ExceptionHandler --> Excepciones : Manages
+
+Reverser ..> Excepciones.ProcesoNoImplementado : throws
+Reverser ..> Excepciones.ProcesoSinEspecificar : throws
+Reverser ..> Excepciones.ProcesoYaDetenido : throws
+
+HaltChecker ..> Excepciones.ProcesoDesconocido : throws
+HaltChecker ..> Excepciones.InputInvalido : throws
+
+CuentaAtrasProcesoHandler ..> Excepciones.CuentaException : throws
+CuentaInfinitaProcesoHandler ..> Excepciones.CuentaException : throws
+
+@enduml

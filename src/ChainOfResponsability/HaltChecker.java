@@ -2,9 +2,7 @@ package ChainOfResponsability;
 
 import Excepciones.InputInvalido;
 import Excepciones.ProcesoDesconocido;
-import Modelo.CuentaAtras;
-import Modelo.CuentaInfinita;
-import Modelo.Proceso;
+import Modelo.*;
 
 public class HaltChecker {
     private static HaltChecker instance;
