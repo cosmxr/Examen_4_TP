@@ -2,14 +2,30 @@ package ChainOfResponsability;
 
 import Excepciones.*;
 
-public class ReverserHandler implements ExcepcionHandlerInterface{
 
-    private ExcepcionHandlerInterface successor;
+/**
+ * Clase ReverserHandler que implementa la interfaz ExcepcionHandlerInterface.
+ * Esta clase maneja excepciones específicas relacionadas con procesos en el Reverser.
+ */
+public class ReverserHandler implements ExcepcionHandlerInterface {
 
+    private ExcepcionHandlerInterface successor;  // Referencia al siguiente manejador
+
+    /**
+     * Constructor de la clase ReverserHandler.
+     *
+     * @param successor El siguiente manejador en la cadena de responsabilidad.
+     */
     public ReverserHandler(ExcepcionHandlerInterface successor) {
         this.successor = successor;
     }
 
+    /**
+     * Maneja la excepción específica.
+     * En este caso, maneja excepciones relacionadas con procesos en el Reverser.
+     *
+     * @param ex La excepción a manejar.
+     */
     @Override
     public void handleException(Exception ex) {
         if (ex instanceof ProcesoNoImplementado) {
@@ -23,6 +39,11 @@ public class ReverserHandler implements ExcepcionHandlerInterface{
         }
     }
 
+    /**
+     * Establece el siguiente manejador en la cadena de responsabilidad.
+     *
+     * @param nextHandler El siguiente manejador a establecer.
+     */
     @Override
     public void setNextHandler(ExcepcionHandlerInterface nextHandler) {
         this.successor = nextHandler;

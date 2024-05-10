@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="Version_fuiciona_bien">
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsability/HaltCheckerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ReverserHandler.java" afterDir="false" />
+    <list default="true" id="6c6aab31-21b4-4ce5-ae85-471b0b5753ec" name="Changes" comment="PlantUML_inicioTests">
+      <change afterPath="$PROJECT_DIR$/Test/ExceptionHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/HaltCheckerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasProcesoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaAtrasProcesoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaProcesoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/CuentaInfinitaProcesoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/ExcepcionHandlerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ExcepcionHandlerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChainOfResponsability/ExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excepciones/CuentaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/CuentaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excepciones/ProcesoDesconocido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoDesconocido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excepciones/ProcesoIncorrecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoIncorrecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excepciones/ProcesoSinEspecificar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoSinEspecificar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Excepciones/ProcesoYaDetenido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Excepciones/ProcesoYaDetenido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen 4 TP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Examen 4 TP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/ReverserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ReverserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/Reverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Reverser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="UML Sequence" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +55,19 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.Vista.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ExceptionHandlerTest.executor": "Run",
+    "JUnit.HaltCheckerTest.executor": "Run",
+    "JUnit.ReverserTest.executor": "Run",
+    "JUnit.ReverserTest.testExecuteWithImplementedProcess.executor": "Run",
+    "JUnit.ReverserTest.testStartWithSpecifiedProcess.executor": "Run",
+    "JUnit.ReverserTest.testStopRunningProcess.executor": "Run",
+    "JUnit.VistaTest.executor": "Run",
+    "JUnit.VistaTest.testShowWindowVisibility.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
@@ -80,15 +88,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Vista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Vista.Vista" />
+    <configuration name="HaltCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Examen 4 TP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Vista.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HaltCheckerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverserTest.testStartWithSpecifiedProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Examen 4 TP" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ReverserTest" />
+      <option name="METHOD_NAME" value="testStartWithSpecifiedProcess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VistaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Examen 4 TP" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VistaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VistaTest.testShowWindowVisibility" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Examen 4 TP" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VistaTest" />
+      <option name="METHOD_NAME" value="testShowWindowVisibility" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,7 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Vista" />
+        <item itemvalue="JUnit.VistaTest" />
+        <item itemvalue="JUnit.VistaTest.testShowWindowVisibility" />
+        <item itemvalue="JUnit.HaltCheckerTest" />
+        <item itemvalue="JUnit.ReverserTest.testStartWithSpecifiedProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -118,7 +154,7 @@
       <updated>1714394632473</updated>
       <workItem from="1714394633609" duration="5259000" />
       <workItem from="1714649455962" duration="1922000" />
-      <workItem from="1714748273989" duration="33513000" />
+      <workItem from="1714748273989" duration="42396000" />
     </task>
     <task id="LOCAL-00001" summary="CuentaAtras y CuentaInfinita">
       <option name="closed" value="true" />
@@ -192,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715261607698</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ExceptionHandler,maneja_todas_excepciones">
+      <option name="closed" value="true" />
+      <created>1715336108129</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715336108129</updated>
+    </task>
+    <task id="LOCAL-00011" summary="PlantUML_inicioTests">
+      <option name="closed" value="true" />
+      <created>1715361137400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715361137400</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +260,19 @@
     <MESSAGE value="Correccion del proyecto en conjunto" />
     <MESSAGE value="Main, y excepciones" />
     <MESSAGE value="Version_fuiciona_bien" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version_fuiciona_bien" />
+    <MESSAGE value="ExceptionHandler,maneja_todas_excepciones" />
+    <MESSAGE value="PlantUML_inicioTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlantUML_inicioTests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

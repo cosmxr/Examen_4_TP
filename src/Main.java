@@ -9,7 +9,17 @@ import Modelo.CuentaInfinita;
 
 import javax.swing.*;
 
+/**
+ * Esta clase representa la clase principal del programa que inicia la aplicación.
+ * Contiene el método `main` que es el punto de entrada principal para ejecutar el programa.
+ */
 public class Main {
+
+    /**
+     * Método principal que inicia la aplicación y configura los componentes principales.
+     * Crea una instancia del controlador `Reverser`, configura la vista y maneja las interacciones de usuario.
+     * @param args Los argumentos de la línea de comandos (no utilizados en este caso).
+     */
     public static void main(String[] args) {
         //Creamos una instancia para el manejador de excepciones
         ExceptionHandler exceptionHandler = ExceptionHandler.getInstance();
