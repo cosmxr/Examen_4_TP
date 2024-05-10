@@ -1,7 +1,5 @@
 package Controlador;
 
-import ChainOfResponsability.ExcepcionHandlerInterface;
-import ChainOfResponsability.ExceptionHandler;
 import Modelo.Proceso;
 import Vista.Vista;
 import ChainOfResponsability.HaltChecker;

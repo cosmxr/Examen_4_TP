@@ -1,24 +1,25 @@
 package ChainOfResponsability;
 
-import Modelo.CuentaAtras;
-import Excepciones.*;
+import Excepciones.ProcesoSinEspecificar;
 
 public class CuentaAtrasProcesoHandler implements ExcepcionHandlerInterface {
-    private ExcepcionHandlerInterface nextHandler;
+    private ExcepcionHandlerInterface successor;
 
-    @Override
-    public void setNextHandler(ExcepcionHandlerInterface nextHandler) {
-        this.nextHandler = nextHandler;
+    public CuentaAtrasProcesoHandler(ExcepcionHandlerInterface successor) {
+        this.successor = successor;
     }
 
     @Override
-    public void handleException(Exception exception) {
-        if (exception instanceof ProcesoIncorrecto &&
-                ((ProcesoIncorrecto) exception).getProceso() instanceof CuentaAtras) {
+    public void handleException(Exception ex) {
+        if (ex.getMessage().contains("CuentaAtras")) {
             // Manejar la excepción
-            System.out.println("Manejando excepción ProcesoIncorrecto para CuentaAtras");
-        } else if (nextHandler != null) {
-            nextHandler.handleException(exception);
+        } else if (successor != null) {
+            successor.handleException(ex);
         }
+    }
+
+    @Override
+    public void setNextHandler(ExcepcionHandlerInterface nextHandler) {
+        this.successor = nextHandler;
     }
 }

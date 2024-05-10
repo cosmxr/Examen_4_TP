@@ -2,7 +2,7 @@ package Excepciones;
 
 import Modelo.Proceso;
 
-public class ProcesoIncorrecto extends Exception {
+public class ProcesoIncorrecto extends Exception{
     private Proceso proceso;
 
     public ProcesoIncorrecto(Proceso proceso) {

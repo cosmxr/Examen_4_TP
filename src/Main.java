@@ -1,3 +1,4 @@
+import ChainOfResponsability.ExceptionHandler;
 import Excepciones.ProcesoNoImplementado;
 import Excepciones.ProcesoSinEspecificar;
 import Modelo.Proceso;
@@ -10,9 +11,13 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+        //Creamos una instancia para el manejador de excepciones
+        ExceptionHandler exceptionHandler = ExceptionHandler.getInstance();
+        try{
         // Crear una instancia del controlador Reverser sin pasar ningún parámetro
         Reverser reverser = new Reverser();
         Vista vista = new Vista(reverser);
+
 
         // Establecer la referencia de la vista en el reverser
         reverser.setVista(vista);
@@ -37,27 +42,22 @@ public class Main {
         vista.getBtnCuentaInfinita().addActionListener(e -> {
             try {
                 reverser.execute(new CuentaInfinita(vista)); // Iniciar una cuenta infinita
-            } catch (ProcesoNoImplementado ex) {
-                throw new RuntimeException(ex);
-            }
-            try {
                 reverser.start(inputProceso[0]); // Comenzar la ejecución del proceso
-            } catch (ProcesoSinEspecificar ex) {
-                throw new RuntimeException(ex);
+            } catch (ProcesoNoImplementado | ProcesoSinEspecificar ex) {
+                exceptionHandler.handleException(ex);
             }
         });
 
         vista.getBtnCuentaAtras().addActionListener(e -> {
             try {
                 reverser.execute(new CuentaAtras(vista)); // Iniciar una cuenta atrás
-            } catch (ProcesoNoImplementado ex) {
-                throw new RuntimeException(ex);
-            }
-            try {
                 reverser.start(inputProceso[0]); // Comenzar la ejecución del proceso
-            } catch (ProcesoSinEspecificar ex) {
-                throw new RuntimeException(ex);
+            } catch (ProcesoNoImplementado | ProcesoSinEspecificar ex) {
+                exceptionHandler.handleException(ex);
             }
         });
-    }
+    }catch (Exception ex){
+            exceptionHandler.handleException(ex);
+        }
+}
 }

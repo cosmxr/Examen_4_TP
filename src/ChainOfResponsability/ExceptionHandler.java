@@ -2,23 +2,25 @@ package ChainOfResponsability;
 
 public class ExceptionHandler {
     private static ExceptionHandler instance;
-    private final ExcepcionHandlerInterface cuentaInfinitaProcesoHandler;
-    private final ExcepcionHandlerInterface cuentaAtrasProcesoHandler;
+    private static ExcepcionHandlerInterface firstHandler;
 
-    private ExceptionHandler() {
-        cuentaInfinitaProcesoHandler = new CuentaInfinitaProcesoHandler();
-        cuentaAtrasProcesoHandler = new CuentaAtrasProcesoHandler();
-        cuentaInfinitaProcesoHandler.setNextHandler(cuentaAtrasProcesoHandler);
+    private ExceptionHandler(ExcepcionHandlerInterface firstHandler) {
+        this.firstHandler = firstHandler;
     }
 
-    public  ExceptionHandler getInstance() {
+    public static ExceptionHandler getInstance() {
         if (instance == null) {
-            instance = new ExceptionHandler();
+            ExcepcionHandlerInterface reverserHandler = new ReverserHandler(null);
+            ExcepcionHandlerInterface haltCheckerHandler = new HaltCheckerHandler(reverserHandler);
+            ExcepcionHandlerInterface cuentaAtrasHandler = new CuentaAtrasProcesoHandler(haltCheckerHandler);
+            ExcepcionHandlerInterface cuentaInfinitaHandler = new CuentaInfinitaProcesoHandler(cuentaAtrasHandler);
+
+            instance = new ExceptionHandler(cuentaInfinitaHandler);
         }
         return instance;
     }
 
-    public void handleException(Exception exception) {
-        cuentaInfinitaProcesoHandler.handleException(exception);
+    public void handleException(Exception ex) {
+        firstHandler.handleException(ex);
     }
 }
