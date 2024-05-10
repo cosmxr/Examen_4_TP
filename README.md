@@ -37,4 +37,4 @@ El directorio `test` contiene las clases de prueba para el proyecto. Cada clase 
 
 Para poder acceder a información mas detallada del proyecto 
 
-link al repositorio -> 
+link al repositorio -> https://github.com/cosmxr/Examen_4_TP.git
